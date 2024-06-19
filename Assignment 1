@@ -76,4 +76,164 @@ n = int(input("Enter the number of Fibonacci numbers to generate: "))
 fibonacci_sequence = fibonacci(n)
 print(f"The first {n} numbers in the Fibonacci sequence are: {fibonacci_sequence}")
 
+# 12. Program to calculate the sum of the digits of a number
+num = input("Enter a number: ")
+sum_of_digits = sum(int(digit) for digit in num)
+print(f"The sum of the digits of {num} is {sum_of_digits}")
+
+# 13. Program to calculate age based on birth year
+from datetime import date
+
+birth_year = int(input("Enter your birth year: "))
+current_year = date.today().year
+age = current_year - birth_year
+print(f"You are {age} years old.")
+
+# 14. Program to read multiple lines of input and print them
+print("Enter lines of text (enter an empty line to finish):")
+lines = []
+while True:
+    line = input()
+    if line == "":
+        break
+    lines.append(line)
+print("You entered:")
+for line in lines:
+    print(line)
+
+# 15. Program to read data from a CSV file and print it
+import csv
+
+filename = 'data.csv'
+try:
+    with open(filename, mode='r') as file:
+        csv_reader = csv.reader(file)
+        for row in csv_reader:
+            print(', '.join(row))
+except FileNotFoundError:
+    print(f"The file {filename} was not found.")
+
+# 16. Program to count the frequency of each character in a string
+from collections import Counter
+
+user_input = input("Enter a string: ")
+frequency = Counter(user_input)
+print("Character frequency:")
+for char, freq in frequency.items():
+    print(f"{char}: {freq}")
+
+# 17. Program to convert a string to title case
+user_input = input("Enter a string: ")
+title_case_string = user_input.title()
+print(f"The title case string is: {title_case_string}")
+
+# 18. Program to check if two strings are anagrams
+def are_anagrams(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+if are_anagrams(str1, str2):
+    print(f"'{str1}' and '{str2}' are anagrams.")
+else:
+    print(f"'{str1}' and '{str2}' are not anagrams.")
+
+# 19. Program to remove all punctuation from a string
+import string
+
+user_input = input("Enter a string: ")
+clean_string = user_input.translate(str.maketrans('', '', string.punctuation))
+print(f"The string without punctuation is: {clean_string}")
+
+# 20. Program to sum a list of numbers
+numbers = list(map(float, input("Enter a list of numbers separated by spaces: ").split()))
+total_sum = sum(numbers)
+print(f"The sum of the numbers is {total_sum}")
+
+# 21. Program to count the occurrences of a specific element in a list
+element = input("Enter the element to count: ")
+lst = input("Enter the list elements separated by spaces: ").split()
+occurrences = lst.count(element)
+print(f"The element '{element}' occurs {occurrences} times in the list.")
+
+# 22. Program to return the minimum and maximum values in a list of numbers
+numbers = list(map(float, input("Enter a list of numbers separated by spaces: ").split()))
+minimum = min(numbers)
+maximum = max(numbers)
+print(f"The minimum value in the list is {minimum}")
+print(f"The maximum value in the list is {maximum}")
+
+# 23. Program to convert temperature from Celsius to Fahrenheit and vice versa
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+choice = input("Convert from (C)elsius to Fahrenheit or (F)ahrenheit to Celsius? (C/F): ").strip().upper()
+if choice == 'C':
+    celsius = float(input("Enter temperature in Celsius: "))
+    fahrenheit = celsius_to_fahrenheit(celsius)
+    print(f"{celsius}°C is equal to {fahrenheit}°F")
+elif choice == 'F':
+    fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+    celsius = fahrenheit_to_celsius(fahrenheit)
+    print(f"{fahrenheit}°F is equal to {celsius}°C")
+else:
+    print("Invalid choice.")
+
+# 24. Program that acts as a simple calculator
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+operator = input("Enter an operator (+, -, *, /): ").strip()
+
+if operator == '+':
+    result = num1 + num2
+elif operator == '-':
+    result = num1 - num2
+elif operator == '*':
+    result = num1 * num2
+elif operator == '/':
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        result = "Error! Division by zero."
+else:
+    result = "Invalid operator."
+print(f"The result is: {result}")
+
+# 25. Program to copy contents of one text file to another
+source_file = input("Enter the name of the source file: ")
+destination_file = input("Enter the name of the destination file: ")
+
+try:
+    with open(source_file, 'r') as src:
+        content = src.read()
+    with open(destination_file, 'w') as dest:
+        dest.write(content)
+    print(f"Contents of {source_file} have been copied to {destination_file}.")
+except FileNotFoundError:
+    print("Source file not found.")
+
+# 26. Program to check if a string starts with a given prefix or ends with a given suffix
+string = input("Enter a string: ")
+prefix = input("Enter the prefix to check: ")
+suffix = input("Enter the suffix to check: ")
+
+if string.startswith(prefix):
+    print(f"The string starts with '{prefix}'.")
+else:
+    print(f"The string does not start with '{prefix}'.")
+
+if string.endswith(suffix):
+    print(f"The string ends with '{suffix}'.")
+else:
+    print(f"The string does not end with '{suffix}'.")
+
+# 27. Program to convert a string into a list of its characters
+user_input = input("Enter a string: ")
+char_list = list(user_input)
+print(f"The list of characters is: {char_list}")
+
+
 
