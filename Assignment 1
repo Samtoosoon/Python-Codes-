@@ -1,85 +1,85 @@
 
 ## Python Programming Assignment-1
 
-1. **Sum of Two Numbers**
+1. Sum of Two Numbers
    - Write a Python program that takes two numbers as input and prints their sum.
 
-2. **Even or Odd**
+2. Even or Odd
    - Write a Python program that checks whether a given number is even or odd.
 
-3. **Factorial Calculation**
+3. Factorial Calculation
    - Write a Python program that calculates the factorial of a given number.
 
-4. **Greeting Message**
+4. Greeting Message
    - Write a program that asks the user for their name and then prints a greeting message.
 
-5. **Write to Text File**
+5. Write to Text File
    - Write a program that takes a string input from the user and writes it to a text file.
 
-6. **Read from Text File**
+6. Read from Text File
    - Write a program that reads the content of a text file and prints it to the console.
 
-7. **String Length**
+7. String Length
    - Write a Python program that takes a string as input and returns its length.
 
-8. **String Concatenation**
+8. String Concatenation
    - Write a Python program that concatenates two strings and returns the result.
 
-9. **Substring Check**
+9. Substring Check
    - Write a Python program that checks if a substring is present in a given string.
 
-10. **Uppercase Conversion**
+10. Uppercase Conversion
     - Write a Python program that converts a given string to uppercase.
 
-11. **Fibonacci Sequence**
+11. Fibonacci Sequence
     - Write a Python program that generates the first n numbers in the Fibonacci sequence.
 
-12. **Sum of Digits**
+12. Sum of Digits
     - Write a Python program that calculates the sum of the digits of a given number.
 
-13. **Calculate Age**
+13. Calculate Age
     - Write a program that asks the user for their birth year and calculates their age.
 
-14. **Read Multiple Lines**
+14. Read Multiple Lines
     - Write a program that reads multiple lines of input from the user until they enter an empty line, then prints all the lines.
 
-15. **Read from CSV**
+15. Read from CSV
     - Write a program that reads data from a CSV file and prints it to the console.
 
-16. **Character Frequency**
+16. Character Frequency
     - Write a program in Python that counts the frequency of each character in a string.
 
-17. **Title Case Conversion**
+17. Title Case Conversion
     - Write a program in Python that converts a given string to title case (first letter of each word capitalized).
 
-18. **Anagram Check**
+18. Anagram Check
     - Write a Python program that checks if two strings are anagrams of each other.
 
-19. **Remove Punctuation**
+19. Remove Punctuation
     - Write a Python program that removes all punctuation from a given string.
 
-20. **List Summation**
+20. List Summation
     - Write a Python program that takes a list of numbers and returns their sum.
 
-21. **Element Occurrence Count**
+21. Element Occurrence Count
     - Write a Python program that counts the occurrences of a specific element in a list.
 
-22. **Min and Max Values**
+22. Min and Max Values
     - Write a Python program that returns the minimum and maximum values in a list of numbers.
 
-23. **Temperature Conversion**
+23. Temperature Conversion
     - Write a program that converts temperature from Celsius to Fahrenheit and vice versa based on user input.
 
-24. **Simple Calculator**
+24. Simple Calculator
     - Write a program that acts as a simple calculator. It should take two numbers and an operator (+, -, *, /) as input and print the result.
 
-25. **File Content Copy**
+25. File Content Copy
     - Write a program that copies the contents of one text file to another.
 
-26. **Prefix and Suffix Check**
+26. Prefix and Suffix Check
     - Write a program in Python that checks if a string starts with a given prefix or ends with a given suffix.
 
-27. **String to List Conversion**
+27. String to List Conversion
     - Write a program in Python that converts a string into a list of its characters.
 
 ---
