@@ -1,0 +1,79 @@
+# Program to add two numbers
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+sum = num1 + num2
+print(f"The sum of {num1} and {num2} is {sum}")
+
+# Program to check if a number is even or odd
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print(f"{num} is even")
+else:
+    print(f"{num} is odd")
+
+# Program to calculate the factorial of a number
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = int(input("Enter a number: "))
+print(f"The factorial of {num} is {factorial(num)}")
+
+# Program to print a greeting message
+name = input("Enter your name: ")
+print(f"Hello, {name}! Nice to meet you.")
+
+# Program to write a string to a text file
+user_input = input("Enter a string: ")
+with open("output.txt", "w") as file:
+    file.write(user_input)
+print("The string has been written to output.txt")
+
+# Program to read content from a text file and print it
+try:
+    with open("output.txt", "r") as file:
+        content = file.read()
+        print("Content of the file:")
+        print(content)
+except FileNotFoundError:
+    print("File not found.")
+
+# Program to return the length of a string
+user_input = input("Enter a string: ")
+length = len(user_input)
+print(f"The length of the string is {length}")
+
+# Program to concatenate two strings
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+result = str1 + str2
+print(f"The concatenated string is: {result}")
+
+# Program to check if a substring is present in a string
+string = input("Enter the main string: ")
+substring = input("Enter the substring: ")
+if substring in string:
+    print(f"The substring '{substring}' is present in the string.")
+else:
+    print(f"The substring '{substring}' is not present in the string.")
+
+# Program to convert a string to uppercase
+user_input = input("Enter a string: ")
+uppercase_string = user_input.upper()
+print(f"The uppercase string is: {uppercase_string}")
+
+# Program to generate Fibonacci sequence
+def fibonacci(n):
+    sequence = [0, 1]
+    for i in range(2, n):
+        next_number = sequence[-1] + sequence[-2]
+        sequence.append(next_number)
+    return sequence[:n]
+
+n = int(input("Enter the number of Fibonacci numbers to generate: "))
+fibonacci_sequence = fibonacci(n)
+print(f"The first {n} numbers in the Fibonacci sequence are: {fibonacci_sequence}")
+
+
