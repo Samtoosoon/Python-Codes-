@@ -1,239 +1,86 @@
-# Program to add two numbers
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-sum = num1 + num2
-print(f"The sum of {num1} and {num2} is {sum}")
 
-# Program to check if a number is even or odd
-num = int(input("Enter a number: "))
-if num % 2 == 0:
-    print(f"{num} is even")
-else:
-    print(f"{num} is odd")
+## Python Programming Assignment-1
 
-# Program to calculate the factorial of a number
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
+1. **Sum of Two Numbers**
+   - Write a Python program that takes two numbers as input and prints their sum.
 
-num = int(input("Enter a number: "))
-print(f"The factorial of {num} is {factorial(num)}")
+2. **Even or Odd**
+   - Write a Python program that checks whether a given number is even or odd.
 
-# Program to print a greeting message
-name = input("Enter your name: ")
-print(f"Hello, {name}! Nice to meet you.")
+3. **Factorial Calculation**
+   - Write a Python program that calculates the factorial of a given number.
 
-# Program to write a string to a text file
-user_input = input("Enter a string: ")
-with open("output.txt", "w") as file:
-    file.write(user_input)
-print("The string has been written to output.txt")
+4. **Greeting Message**
+   - Write a program that asks the user for their name and then prints a greeting message.
 
-# Program to read content from a text file and print it
-try:
-    with open("output.txt", "r") as file:
-        content = file.read()
-        print("Content of the file:")
-        print(content)
-except FileNotFoundError:
-    print("File not found.")
+5. **Write to Text File**
+   - Write a program that takes a string input from the user and writes it to a text file.
 
-# Program to return the length of a string
-user_input = input("Enter a string: ")
-length = len(user_input)
-print(f"The length of the string is {length}")
+6. **Read from Text File**
+   - Write a program that reads the content of a text file and prints it to the console.
 
-# Program to concatenate two strings
-str1 = input("Enter first string: ")
-str2 = input("Enter second string: ")
-result = str1 + str2
-print(f"The concatenated string is: {result}")
+7. **String Length**
+   - Write a Python program that takes a string as input and returns its length.
 
-# Program to check if a substring is present in a string
-string = input("Enter the main string: ")
-substring = input("Enter the substring: ")
-if substring in string:
-    print(f"The substring '{substring}' is present in the string.")
-else:
-    print(f"The substring '{substring}' is not present in the string.")
+8. **String Concatenation**
+   - Write a Python program that concatenates two strings and returns the result.
 
-# Program to convert a string to uppercase
-user_input = input("Enter a string: ")
-uppercase_string = user_input.upper()
-print(f"The uppercase string is: {uppercase_string}")
+9. **Substring Check**
+   - Write a Python program that checks if a substring is present in a given string.
 
-# Program to generate Fibonacci sequence
-def fibonacci(n):
-    sequence = [0, 1]
-    for i in range(2, n):
-        next_number = sequence[-1] + sequence[-2]
-        sequence.append(next_number)
-    return sequence[:n]
+10. **Uppercase Conversion**
+    - Write a Python program that converts a given string to uppercase.
 
-n = int(input("Enter the number of Fibonacci numbers to generate: "))
-fibonacci_sequence = fibonacci(n)
-print(f"The first {n} numbers in the Fibonacci sequence are: {fibonacci_sequence}")
+11. **Fibonacci Sequence**
+    - Write a Python program that generates the first n numbers in the Fibonacci sequence.
 
-# 12. Program to calculate the sum of the digits of a number
-num = input("Enter a number: ")
-sum_of_digits = sum(int(digit) for digit in num)
-print(f"The sum of the digits of {num} is {sum_of_digits}")
+12. **Sum of Digits**
+    - Write a Python program that calculates the sum of the digits of a given number.
 
-# 13. Program to calculate age based on birth year
-from datetime import date
+13. **Calculate Age**
+    - Write a program that asks the user for their birth year and calculates their age.
 
-birth_year = int(input("Enter your birth year: "))
-current_year = date.today().year
-age = current_year - birth_year
-print(f"You are {age} years old.")
+14. **Read Multiple Lines**
+    - Write a program that reads multiple lines of input from the user until they enter an empty line, then prints all the lines.
 
-# 14. Program to read multiple lines of input and print them
-print("Enter lines of text (enter an empty line to finish):")
-lines = []
-while True:
-    line = input()
-    if line == "":
-        break
-    lines.append(line)
-print("You entered:")
-for line in lines:
-    print(line)
+15. **Read from CSV**
+    - Write a program that reads data from a CSV file and prints it to the console.
 
-# 15. Program to read data from a CSV file and print it
-import csv
+16. **Character Frequency**
+    - Write a program in Python that counts the frequency of each character in a string.
 
-filename = 'data.csv'
-try:
-    with open(filename, mode='r') as file:
-        csv_reader = csv.reader(file)
-        for row in csv_reader:
-            print(', '.join(row))
-except FileNotFoundError:
-    print(f"The file {filename} was not found.")
+17. **Title Case Conversion**
+    - Write a program in Python that converts a given string to title case (first letter of each word capitalized).
 
-# 16. Program to count the frequency of each character in a string
-from collections import Counter
+18. **Anagram Check**
+    - Write a Python program that checks if two strings are anagrams of each other.
 
-user_input = input("Enter a string: ")
-frequency = Counter(user_input)
-print("Character frequency:")
-for char, freq in frequency.items():
-    print(f"{char}: {freq}")
+19. **Remove Punctuation**
+    - Write a Python program that removes all punctuation from a given string.
 
-# 17. Program to convert a string to title case
-user_input = input("Enter a string: ")
-title_case_string = user_input.title()
-print(f"The title case string is: {title_case_string}")
+20. **List Summation**
+    - Write a Python program that takes a list of numbers and returns their sum.
 
-# 18. Program to check if two strings are anagrams
-def are_anagrams(str1, str2):
-    return sorted(str1) == sorted(str2)
+21. **Element Occurrence Count**
+    - Write a Python program that counts the occurrences of a specific element in a list.
 
-str1 = input("Enter the first string: ")
-str2 = input("Enter the second string: ")
-if are_anagrams(str1, str2):
-    print(f"'{str1}' and '{str2}' are anagrams.")
-else:
-    print(f"'{str1}' and '{str2}' are not anagrams.")
+22. **Min and Max Values**
+    - Write a Python program that returns the minimum and maximum values in a list of numbers.
 
-# 19. Program to remove all punctuation from a string
-import string
+23. **Temperature Conversion**
+    - Write a program that converts temperature from Celsius to Fahrenheit and vice versa based on user input.
 
-user_input = input("Enter a string: ")
-clean_string = user_input.translate(str.maketrans('', '', string.punctuation))
-print(f"The string without punctuation is: {clean_string}")
+24. **Simple Calculator**
+    - Write a program that acts as a simple calculator. It should take two numbers and an operator (+, -, *, /) as input and print the result.
 
-# 20. Program to sum a list of numbers
-numbers = list(map(float, input("Enter a list of numbers separated by spaces: ").split()))
-total_sum = sum(numbers)
-print(f"The sum of the numbers is {total_sum}")
+25. **File Content Copy**
+    - Write a program that copies the contents of one text file to another.
 
-# 21. Program to count the occurrences of a specific element in a list
-element = input("Enter the element to count: ")
-lst = input("Enter the list elements separated by spaces: ").split()
-occurrences = lst.count(element)
-print(f"The element '{element}' occurs {occurrences} times in the list.")
+26. **Prefix and Suffix Check**
+    - Write a program in Python that checks if a string starts with a given prefix or ends with a given suffix.
 
-# 22. Program to return the minimum and maximum values in a list of numbers
-numbers = list(map(float, input("Enter a list of numbers separated by spaces: ").split()))
-minimum = min(numbers)
-maximum = max(numbers)
-print(f"The minimum value in the list is {minimum}")
-print(f"The maximum value in the list is {maximum}")
+27. **String to List Conversion**
+    - Write a program in Python that converts a string into a list of its characters.
 
-# 23. Program to convert temperature from Celsius to Fahrenheit and vice versa
-def celsius_to_fahrenheit(celsius):
-    return (celsius * 9/5) + 32
-
-def fahrenheit_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * 5/9
-
-choice = input("Convert from (C)elsius to Fahrenheit or (F)ahrenheit to Celsius? (C/F): ").strip().upper()
-if choice == 'C':
-    celsius = float(input("Enter temperature in Celsius: "))
-    fahrenheit = celsius_to_fahrenheit(celsius)
-    print(f"{celsius}°C is equal to {fahrenheit}°F")
-elif choice == 'F':
-    fahrenheit = float(input("Enter temperature in Fahrenheit: "))
-    celsius = fahrenheit_to_celsius(fahrenheit)
-    print(f"{fahrenheit}°F is equal to {celsius}°C")
-else:
-    print("Invalid choice.")
-
-# 24. Program that acts as a simple calculator
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-operator = input("Enter an operator (+, -, *, /): ").strip()
-
-if operator == '+':
-    result = num1 + num2
-elif operator == '-':
-    result = num1 - num2
-elif operator == '*':
-    result = num1 * num2
-elif operator == '/':
-    if num2 != 0:
-        result = num1 / num2
-    else:
-        result = "Error! Division by zero."
-else:
-    result = "Invalid operator."
-print(f"The result is: {result}")
-
-# 25. Program to copy contents of one text file to another
-source_file = input("Enter the name of the source file: ")
-destination_file = input("Enter the name of the destination file: ")
-
-try:
-    with open(source_file, 'r') as src:
-        content = src.read()
-    with open(destination_file, 'w') as dest:
-        dest.write(content)
-    print(f"Contents of {source_file} have been copied to {destination_file}.")
-except FileNotFoundError:
-    print("Source file not found.")
-
-# 26. Program to check if a string starts with a given prefix or ends with a given suffix
-string = input("Enter a string: ")
-prefix = input("Enter the prefix to check: ")
-suffix = input("Enter the suffix to check: ")
-
-if string.startswith(prefix):
-    print(f"The string starts with '{prefix}'.")
-else:
-    print(f"The string does not start with '{prefix}'.")
-
-if string.endswith(suffix):
-    print(f"The string ends with '{suffix}'.")
-else:
-    print(f"The string does not end with '{suffix}'.")
-
-# 27. Program to convert a string into a list of its characters
-user_input = input("Enter a string: ")
-char_list = list(user_input)
-print(f"The list of characters is: {char_list}")
-
-
+---
 
